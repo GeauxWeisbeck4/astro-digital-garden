@@ -1,0 +1,54 @@
+---
+import { SEO } from 'astro-seo';
+
+interface Props {
+    title?: string;
+    description?: string;
+    ogImage?: string;
+}
+const {
+    title,
+    description = "Digital Garden of Andrew Weisbeck",
+    ogImage = "https://geauxweisbeck4.netlify.app/og.png",
+} = Astro.props as Props;
+const twitterHandle = "@GeauxWeisbeck4"
+---
+
+<SEO
+    title={title ? `${title} | 0xDedinfosec` : '0xDedinfosec Blogs'}
+    description={description}
+    openGraph={{
+        basic: {
+            title: 'Andrews Digital Garden',
+            type: 'website',
+            image: ogImage,
+        },
+    }}
+    twitter={{
+        creator: twitterHandle,
+        card: 'summary_large_image',
+        site: twitterHandle,
+        title: 'GeauxWeisbeck4',
+        description,
+        image: ogImage,
+        imageAlt: 'GeauxWeisbeck4',
+    }}
+    extend={{
+        link: [
+            {
+                rel: 'sitemap',
+                href: '/sitemap-index.xml',
+            },
+        ],
+        meta: [
+            {
+                name: 'google-site-verification',
+                content: '2PrS27IRbrLgYfKmOC1bjuPohSqqsGbEUVY6dKD0bic',
+            },
+            {
+                name: 'yandex-verification',
+                content: 'd1860867354dc963',
+            },
+        ],
+    }}
+/>
