@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Home",
+    "href": "/"
+  },
+  {
+    "name": "About",
+    "href": "/about"
+  },
+  {
+    "name": "Notes",
+    "href": "/notes"
+  },
+  {
+    "name": "Blog",
+    "href": "/blog"
+  },
+  {
+    "name": "Resources",
+    "href": "/resources"
+  },
+  {
+    "name": "Donate",
+    "href": "/donate"
+  }
+]

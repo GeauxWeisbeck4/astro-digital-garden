@@ -1,0 +1,19 @@
+---
+import navLinks from './navLinks.json'
+---
+<nav class="flex items-center justify-between w-full relative max-w-2xl mx-auto pt-8 pb-8 sm:pb-16">
+  <div class="ml-[-0.60rem]">
+  {
+    navLinks.map((link) => {
+      return (
+        <a
+          href={link.href}
+          class="font-semibold"
+        >
+        <span class="capsize">{link.name}</span>
+        </a>
+      )
+    })
+  }
+  </div>
+</nav>
